@@ -33,7 +33,8 @@
         "array",
         "function",
         "enum",
-        "stylesSheet"
+        "stylesSheet",
+        "ReactNode"
       ],
       "required": true
     },
