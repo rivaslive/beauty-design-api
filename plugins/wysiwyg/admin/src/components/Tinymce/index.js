@@ -14,12 +14,11 @@ const TinyEditor = ({onChange, name, value}) => {
       outputFormat="html"
       init={{
         height: 400,
-        default_link_target: '_blank',
         link_assume_external_targets: true,
         link_title: false,
         relative_urls: false,
         remove_script_host: false,
-        convert_urls: true,
+        convert_urls: false,
         plugins: [
           'advlist autolink link image lists charmap print preview hr anchor pagebreak',
           'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
