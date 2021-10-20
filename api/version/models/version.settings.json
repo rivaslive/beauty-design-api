@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "versions",
+  "info": {
+    "name": "Versiones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "version": {
+      "type": "string",
+      "required": true
+    },
+    "dateLauncher": {
+      "type": "date",
+      "required": true
+    },
+    "CHANGELOG": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "example",
+  "info": {
+    "name": "Ejemplos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "code": {
+      "type": "text",
+      "required": true
+    },
+    "snack": {
+      "type": "string"
+    },
+    "componente": {
+      "via": "ejemplos",
+      "model": "componente"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    }
+  }
+}

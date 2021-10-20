@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "component",
+  "info": {
+    "name": "Componentes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "howToUse": {
+      "type": "richtext"
+    },
+    "defaultCode": {
+      "type": "text"
+    },
+    "version": {
+      "model": "version"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "ejemplos": {
+      "via": "componente",
+      "collection": "ejemplos"
+    },
+    "apis": {
+      "via": "componentes",
+      "collection": "api"
+    }
+  }
+}

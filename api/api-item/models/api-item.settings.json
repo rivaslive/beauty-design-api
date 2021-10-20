@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "api_items",
+  "info": {
+    "name": "API- ITEM",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "property": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "boolean",
+        "string",
+        "number",
+        "object",
+        "array",
+        "function",
+        "enum",
+        "stylesSheet"
+      ],
+      "required": true
+    },
+    "default": {
+      "type": "string",
+      "default": "---"
+    },
+    "apis": {
+      "via": "items",
+      "collection": "api"
+    }
+  }
+}
